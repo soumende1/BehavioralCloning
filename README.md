@@ -27,7 +27,7 @@ The following python scrip needed to be run in the working folder
 
 python model.py
 
-This will generate a file model-<epoch>.h5 whenever the performance in the epoch is better than the previous best. For example, the first epoch will generate a file called model-000.h5.
+This will generate a file model-000.h5 whenever the performance in the epoch is better than the previous best. For example, the first epoch will generate a file called model-001.h5.
 
 
 ## To Test the model
