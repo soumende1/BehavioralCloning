@@ -50,13 +50,13 @@ The NVDIA model does not provide the activation function, hence ELU activiation 
 ## Image Augumentation
 The following augumentation technique along with Python generator to generate unlimited number of images:
 
-Randomly choose right, left or center images.
-For left image, steering angle is adjusted by +0.2
-For right image, steering angle is adjusted by -0.2
-Randomly flip image left/right
-Randomly translate image horizontally with steering angle adjustment (0.002 per pixel shift)
-Randomly translate image virtically
-Randomly added shadows
-Randomly altering image brightness (lighter or darker)
+- Randomly choose right, left or center images.
+- For left image, steering angle is adjusted by +0.2
+- For right image, steering angle is adjusted by -0.2
+- Randomly flip image left/right
+- Randomly translate image horizontally with steering angle adjustment (0.002 per pixel shift)
+- Randomly translate image virtically
+- Randomly added shadows
+- Randomly altering image brightness (lighter or darker)
 Using the left/right images is useful to train the recovery driving scenario. The horizontal translation is useful for difficult curve handling (i.e. the one after the bridge).
 
