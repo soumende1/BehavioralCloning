@@ -38,3 +38,11 @@ The NVDIA model does not provide the activation function, hence ELU activiation 
 - Fully connected: neurons: 50, activation: ELU
 - Fully connected: neurons: 10, activation: ELU
 - Fully connected: neurons: 1 (output)
+
+# Data Preprocessing
+## Image Sizing
+
+•	the images are cropped so that the model won’t be trained with the sky and the car front parts
+•	the images are resized to 66x200 (3 YUV channels) as per NVIDIA model
+•	the images are normalized (image data divided by 127.5 and subtracted 1.0). As stated in the Model Architecture section, this is to avoid saturation and make gradients work better)
+
