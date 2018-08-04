@@ -74,5 +74,9 @@ I used ModelCheckpoint from Keras to save the model only if the validation loss 
 
 Once the model to performed optimally one of the track, the model was frozen. 
 Here is the output
-![Here is the output](/Videos/run1.mp4)
+<div class="row post-image-bg" markdown="1">
+    <video width="99%" height="540" autoplay loop muted markdown="1">
+        <source src="/Videos/run1.mp4" type="video/mp4" markdown="1" >
+        </video>
+</div>
 
