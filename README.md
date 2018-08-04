@@ -60,3 +60,13 @@ The following augumentation technique along with Python generator to generate un
 - Randomly altering image brightness (lighter or darker)
 Using the left/right images is useful to train the recovery driving scenario. The horizontal translation is useful for difficult curve handling (i.e. the one after the bridge).
 
+# Training, Validation and Test
+
+I splitted the images into train and validation set in order to measure the performance at every epoch. Testing was done using the simulator.
+
+As for training,
+
+I used mean squared error for the loss function to measure how close the model predicts to the given steering angle for each image.
+I used Adam optimizer for optimization with learning rate of 1.0e-4 which is smaller than the default of 1.0e-3. The default value was too big and made the validation loss stop improving too soon.
+I used ModelCheckpoint from Keras to save the model only if the validation loss is improved which is checked for every epoch.
+
