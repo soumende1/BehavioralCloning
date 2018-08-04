@@ -70,3 +70,9 @@ I used mean squared error for the loss function to measure how close the model p
 I used Adam optimizer for optimization with learning rate of 1.0e-4 which is smaller than the default of 1.0e-3. The default value was too big and made the validation loss stop improving too soon.
 I used ModelCheckpoint from Keras to save the model only if the validation loss is improved which is checked for every epoch.
 
+# Final Model
+
+Once the model to performed optimally one of the track, the model was frozen. 
+Here is the output
+![Here is the output](/Videos/run1.mp4)
+
