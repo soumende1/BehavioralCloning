@@ -19,3 +19,22 @@ As image processing is involved, the model is using convolutional layers for aut
 As suggested by Udacity, in this project the [NVIDIA model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) was used,  
 ![NVidia model](/images/nVidia_model.png)
 
+The **NVIDIA model** is well documented and hence very useful for the project
+
+The following adjustments were done to training the model with the training data
+- To avoid saturation and make gradients work better, one Lambda layer was used to normalized input images 
+- An additional dropout layer to avoid overfitting after the convolution layers.
+- The ELU activation function was used for every layer except for the output layer to introduce non-linearity.
+
+The NVDIA model does not provide the activation function, hence ELU activiation function was selected. Finally the model selected is as follows
+- Image normalization using a Keras Lambda function
+- Convolution: 5x5, filter: 24, strides: 2x2, activation: ELU
+- Convolution: 5x5, filter: 36, strides: 2x2, activation: ELU
+- Convolution: 5x5, filter: 48, strides: 2x2, activation: ELU
+- Convolution: 3x3, filter: 64, strides: 1x1, activation: ELU
+- Convolution: 3x3, filter: 64, strides: 1x1, activation: ELU
+- Drop out (0.5)
+- Fully connected: neurons: 100, activation: ELU
+- Fully connected: neurons: 50, activation: ELU
+- Fully connected: neurons: 10, activation: ELU
+- Fully connected: neurons: 1 (output)
