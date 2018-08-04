@@ -13,6 +13,30 @@ One the **training data** is generated for one lap of driving for the chosen tes
 The network is based on The [NVIDIA model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/), which has been proven to work in this problem domain.
 As image processing is involved, the model is using convolutional layers for automated feature engineering.
 
+
+#This was used for setting the environment
+
+# Use TensorFlow without GPU
+conda env create -f environment.yml 
+
+# Use TensorFlow with GPU
+conda env create -f environment-gpu.yml
+
+## To train the model
+The following python scrip needed to be run in the working folder
+
+python model.py
+This will generate a file model-<epoch>.h5 whenever the performance in the epoch is better than the previous best. For example, the first epoch will generate a file called model-000.h5.
+
+
+## To Test the model
+Once the training is comple , we need to check the performance of the model by first 
+Start up the Udacity self-driving simulator, choose a scene and press the Autonomous Mode button. 
+
+Then, run the model as follows:
+python drive.py model.h5
+
+
 # Approach
 ## 1. Model Selection and Data preprocessing
 
