@@ -83,5 +83,5 @@ Here is the output
 
 | Autonomous  Driving  | 
 |:--------------------:| 
-|![Controlled](./images/nVidia_model.png) | 
+|![Controlled](./Videos/run1.gif) | 
 
