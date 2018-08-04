@@ -46,3 +46,17 @@ The NVDIA model does not provide the activation function, hence ELU activiation 
 * the images are resized to 66x200 (3 YUV channels) as per NVIDIA model
 * the images are normalized (image data divided by 127.5 and subtracted 1.0). As stated in the Model Architecture section, this is to avoid saturation and make gradients work better)
 
+# Model Training
+## Image Augumentation
+The following augumentation technique along with Python generator to generate unlimited number of images:
+
+Randomly choose right, left or center images.
+For left image, steering angle is adjusted by +0.2
+For right image, steering angle is adjusted by -0.2
+Randomly flip image left/right
+Randomly translate image horizontally with steering angle adjustment (0.002 per pixel shift)
+Randomly translate image virtically
+Randomly added shadows
+Randomly altering image brightness (lighter or darker)
+Using the left/right images is useful to train the recovery driving scenario. The horizontal translation is useful for difficult curve handling (i.e. the one after the bridge).
+
