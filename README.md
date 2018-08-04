@@ -81,4 +81,7 @@ Here is the output
         </video>
      </div>  
 
+| Autonomous  Driving  | 
+|:--------------------:| 
+|![Controlled](./images/nVidia_model.png) | 
 
