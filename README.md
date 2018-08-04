@@ -38,6 +38,17 @@ Then, run the model as follows:
 python drive.py model.h5
 
 
+## To record the images from frames when the car is running in autonomous mode
+
+python drive.py model.h5 run1
+
+## To create a video of from the above images
+
+The image file name from above is a timestamp of when the image was seen.. This information is used by video.py to create a chronological video of the agent driving.
+
+python video.py run1
+
+
 # Approach
 ## 1. Model Selection and Data preprocessing
 
