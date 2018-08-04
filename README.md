@@ -17,5 +17,5 @@ As image processing is involved, the model is using convolutional layers for aut
 ## 1. Model Selection and Data preprocessing
 
 As suggested by Udacity, in this project the [NVIDIA model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) was used,  
-![the diagram below is a depiction of the nVidia model architecture](\images\nVidia_model.png)
+![NVidia model](/images/nVidia_model.png)
 
