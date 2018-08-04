@@ -10,5 +10,5 @@ Three images and the steering angle will be generated per frame and a sample dat
 - Steering angle- -0.5494633
 
 One the **training data** is generated for one lap of driving for the chosen test track, a deep neural network is used to clone car driving behaviour. It is a **supervised regression** problem between the car steering angles and the road images in front of a car.
-The network is based on The NVIDIA model, which has been proven to work in this problem domain.
+The network is based on The [NVIDIA model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/), which has been proven to work in this problem domain.
 As image processing is involved, the model is using convolutional layers for automated feature engineering.
