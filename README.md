@@ -26,6 +26,7 @@ conda env create -f environment-gpu.yml
 The following python scrip needed to be run in the working folder
 
 python model.py
+
 This will generate a file model-<epoch>.h5 whenever the performance in the epoch is better than the previous best. For example, the first epoch will generate a file called model-000.h5.
 
 
