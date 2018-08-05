@@ -42,7 +42,7 @@ python drive.py model.h5
 
 python drive.py model.h5 run1
 
-## To create a videofrom the above images
+## To create a video from the above images
 
 The image file name from above has a timestamp of when the images were seen.. This information is used by video.py to create a chronological video of the agent driving by the following script
 
@@ -107,19 +107,15 @@ As for training,
 
 # Final Model
 
-Once the model to performed optimally one of the track, the model was frozen. 
-Here is the output
+Once the model  performed optimally on one of the track, the model was frozen. 
+Here is the output of the model when the simulator was run in autonomous mode and the following code were run
+python drive.py model.h5 run1 --> which steers the simulator car to stay in the middle of the road and saves the images from the frames in chronological order in folder "run1" followed by 
+python video.py run1, which saves the images in run1 folder in run1.mp4 . The gif format of run1.mp4 is embedded below
 
-    <div  markdown="1">
-        <video width="99%" height="540" autoplay loop muted markdown="1">
-        <source src="/Videos/run1.mp4" type="video/mp4" markdown="1" >
-        </video>
-     </div>  
 
 | Autonomous  Driving  | 
 |:--------------------:| 
 |![Controlled](./Videos/run1.gif) | 
 
-- [The Lake Track - YouTube Link](https://youtu.be/7QdL3Az55jU)
-- [The Mountain Track - YouTube Link](https://youtu.be/fqaibk81eM4)
+
 
