@@ -113,7 +113,7 @@ Here is the output of the model when the simulator was run in autonomous mode an
 - python video.py run1, which saves the images in run1 folder in run1.mp4 . 
 - The gif format of run1.mp4 is embedded below
 
-The autonomous driving was also recorded using screen recorder and uploaded in video directory. As the github has a restriction on file size a smaller portion of the screen recorded video has been upload.
+The autonomous driving was also recorded using screen recorder, they could not be uplaoded but stored in my local machine. They can be shared on request.
 
 
 | Autonomous  Driving  | 
