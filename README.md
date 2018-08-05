@@ -15,26 +15,26 @@ As image processing is involved, the model is using convolutional layers for aut
 
 #This was used for setting the environment
 
-# Use TensorFlow without GPU
+### Use TensorFlow without GPU
 conda env create -f environment.yml 
 
-# Use TensorFlow with GPU *This was used when the code was run in AWS EC2 instance) # 
+### Use TensorFlow with GPU *This was used when the code was run in AWS EC2 instance) # 
 Note- I needed to install cuDNN compatible libraries and header files as the [NVDIA setup instructions](https://developer.nvidia.com/rdp/cudnn-archive )as well on the top of above
 conda env create -f environment-gpu.yml
 
 ## To train the model
-The following python scrip needed to be run in the working folder
+The following python scrip was run in the working folder to train the model
 
 python model.py
 
-This will generate a file model-000.h5 whenever the performance in the epoch is better than the previous best. For example, the first epoch will generate a file called model-001.h5.
+This will generate a file model-000.h5. Whenever the performance in the epoch is better than the previous best. For example, the first epoch will generate a file called model-001.h5. One the training is complete, rename the file to model.h5
 
 
 ## To Test the model
-Once the training is comple , we need to check the performance of the model by first 
-Start up the Udacity self-driving simulator, choose a scene and press the Autonomous Mode button. 
+Once the training is complete , we need to check the performance of the model by first 
+starting up the Udacity self-driving simulator, then choose a track and press the Autonomous Mode button. 
 
-Then, run the model as follows:
+Then, run the model by running the following script:
 python drive.py model.h5
 
 
@@ -42,9 +42,9 @@ python drive.py model.h5
 
 python drive.py model.h5 run1
 
-## To create a video of from the above images
+## To create a videofrom the above images
 
-The image file name from above is a timestamp of when the image was seen.. This information is used by video.py to create a chronological video of the agent driving.
+The image file name from above has a timestamp of when the images were seen.. This information is used by video.py to create a chronological video of the agent driving by the following script
 
 python video.py run1
 
@@ -86,25 +86,24 @@ The NVDIA model does not provide the activation function, hence ELU activiation 
 ## Image Augumentation
 The following augumentation technique along with Python generator to generate unlimited number of images:
 
-- Randomly choose right, left or center images.
-- For left image, steering angle is adjusted by +0.2
-- For right image, steering angle is adjusted by -0.2
+-  Randomly choose an image from the center, left or right, and adjust the steering angle.
+- For left/right image, steering angle is adjusted by +0.2/-0.2
 - Randomly flip image left/right
-- Randomly translate image horizontally with steering angle adjustment (0.002 per pixel shift)
-- Randomly translate image virtically
+- Randomly shift the image vertically and horizontally
 - Randomly added shadows
-- Randomly altering image brightness (lighter or darker)
-Using the left/right images is useful to train the recovery driving scenario. The horizontal translation is useful for difficult curve handling (i.e. the one after the bridge).
+- Randomly adjust Saturation in HLS
+
 
 # Training, Validation and Test
 
-I splitted the images into train and validation set in order to measure the performance at every epoch. Testing was done using the simulator.
+Then the images were splitted into train and validation set in order to measure the performance at every epoch. Testing was done using the simulator.
 
 As for training,
 
-I used mean squared error for the loss function to measure how close the model predicts to the given steering angle for each image.
-I used Adam optimizer for optimization with learning rate of 1.0e-4 which is smaller than the default of 1.0e-3. The default value was too big and made the validation loss stop improving too soon.
-I used ModelCheckpoint from Keras to save the model only if the validation loss is improved which is checked for every epoch.
+ Mean squared error method was used for the loss function to measure how close the model predicts to the given steering angle for each image.
+ Adam optimizer was used for optimization with learning rate of 1.0e-4 
+ 
+ ModelCheckpoint from Keras was used to save the model only if the validation loss is improved when compared with previous epoch.
 
 # Final Model
 
