@@ -109,8 +109,9 @@ As for training,
 
 Once the model  performed optimally on one of the track, the model was frozen. 
 Here is the output of the model when the simulator was run in autonomous mode and the following code were run
-python drive.py model.h5 run1 --> which steers the simulator car to stay in the middle of the road and saves the images from the frames in chronological order in folder "run1" followed by 
-python video.py run1, which saves the images in run1 folder in run1.mp4 . The gif format of run1.mp4 is embedded below
+- python drive.py model.h5 run1 --> which steers the simulator car to stay in the middle of the road and saves the images from the frames in chronological order in folder "run1" followed by 
+- python video.py run1, which saves the images in run1 folder in run1.mp4 . 
+- The gif format of run1.mp4 is embedded below
 
 
 | Autonomous  Driving  | 
